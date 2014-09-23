@@ -1,0 +1,25 @@
+// Some common variables and mixins to get you started.
+// Variables allow you to re-use colors, sizes, and other values without repeating
+// yourself. This means that changes that should be small, such as tweaking the
+// coloring or the sizing, can be done in one place, not all over the stylesheet.
+
+$base-font: lato;
+$base-size: 1em;
+$header-font: lobster; // you can refer to other variables
+$header-size: 3em;
+$bf-bold: 900;
+
+// base color scheme
+$body-background: #F3EFE6; //light Tan
+$body-shade: #747371;
+$highlight: #A9C5DA; //light blue
+$accent-color: #32313F;
+$highlight: #add8e6;
+$text-color: #404040;
+$link-color: #F06F4F;
+$link-visited: #F06F4F;
+
+// Supported Values for $layout:
+//  null | content-sidebar | sidebar-content
+$layout: content-sidebar;
+$vspacing: 1.5em;

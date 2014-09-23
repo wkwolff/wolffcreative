@@ -1,0 +1,137 @@
+$break: 1000px;
+
+
+// Layout: Content-Sidebar
+@if $layout == content-sidebar {
+	.content-area, .breadcrumbs {
+		float: left;
+		margin: 0 -30% 0 10%;
+		width: 80%;
+		  @media screen and (max-width: $break) {
+        margin: none;
+        float: none;
+    }
+
+	}
+	.site-main {
+		margin: 0 30% 0 0;
+      @media screen and (max-width: $break) {
+        margin: 0;
+      }
+	}
+	.site-content .widget-area { /* Sidebar 1 */
+		float: right;
+		overflow: hidden;
+		width: 20%;
+		margin-right: 10%;
+      @media screen and (max-width: $break) {
+        width: 100%;
+        float: none;
+    }
+	}
+}
+
+// Layout: Sidebar-Content
+@else if $layout == sidebar-content {
+	.content-area {
+		float: right;
+		margin: 0 0 0 -25%;
+		width: 80%;
+	}
+	.site-main {
+		margin: 0 0 0 25%;
+	}
+	.site-content .widget-area { /* Sidebar 1 */
+		float: left;
+		overflow: hidden;
+		width: 25%;
+	}
+}
+
+@if $layout != null {
+	.site-footer {
+		clear: both;
+		background: $body-shade;
+		border-top: 10px solid darken($body-shade, 10%);
+		.site-info {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px 0;
+      min-height: 5em;
+		}
+	}
+}
+
+// Site Header
+#masthead {
+  background: $accent-color;
+  @include background-image(linear-gradient( $accent-color, darken($accent-color, 10%)));
+  //margin-bottom: 1em;
+  //border-top: 10px solid shade($link-color, 10%);
+  border-bottom: 10px solid $accent-color;
+  padding: 0 10%;
+  .site-branding {
+    width: 30%;
+  }
+  #site-navigation {
+    width: 70%;
+  }
+  .site-branding, #site-navigation {
+    float: left;
+    h1 {
+      font-size:2.5em;
+      margin-bottom: 10px;
+      padding-top: .2em;
+      //@include text-shadow(rgba($accent-color, 0.9) 5px 5px 0, rgba($highlight, 0.3) 8px 8px 0);
+      a {
+        text-decoration: none;
+        @include link-colors($highlight, darken($highlight, 30%));
+      }
+    }
+    h2 {
+      font-size:$header-size;
+    }
+  }
+}
+@media screen and (max-width: 864px) {
+  #masthead {
+    .site-branding {
+      width: 85%;
+      h1 {
+        font-size:$header-size;
+        margin-bottom: 10px;
+        @include text-shadow(rgba($accent-color, 0.9) 2px 2px 0, rgba($highlight, 0.3) 5px 5px 0);
+      }
+    }
+  }
+  #secondary {
+    margin: 0 -30% 0 10%;
+    width: 80%;
+  }
+}
+// Site Banner
+#banner.widget {
+  background:$highlight;
+  margin: 0;
+  padding: 5px 10%;
+  text-align: center;
+}
+// Site Footer 
+footer {
+  .site-info {
+    a {
+      color: $text-color;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+// Portfolio
+.portfolio-item {
+  margin: 20px;
+  img {
+    width: 150px;
+    max-width: initial;
+  }
+}

@@ -1,0 +1,1152 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+/* =Reset
+-------------------------------------------------------------- */
+/* line 11, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 22, ../sass/_reset.scss */
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+/* line 30, ../sass/_reset.scss */
+*,
+*:before,
+*:after {
+  /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 35, ../sass/_reset.scss */
+body {
+  background: #747371;
+}
+
+/* line 47, ../sass/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* line 50, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 53, ../sass/_reset.scss */
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 57, ../sass/_reset.scss */
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 62, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* line 65, ../sass/_reset.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 68, ../sass/_reset.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 72, ../sass/_reset.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* line 75, ../sass/_reset.scss */
+a img {
+  border: 0;
+}
+
+/* line 2, ../sass/_mixins.scss */
+.clear:before,
+.entry-content:before,
+.comment-content:before,
+.site-header:before,
+.site-content:before,
+.site-footer:before, .gallery:before, .clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after, .gallery:after {
+  content: "";
+  display: table;
+}
+/* line 6, ../sass/_mixins.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after, .gallery:after {
+  clear: both;
+}
+
+/* =Global
+----------------------------------------------- */
+/* Alignment */
+/* line 5, ../sass/_global.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 10, ../sass/_global.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 15, ../sass/_global.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+/* line 22, ../sass/_global.scss */
+.screen-reader-text {
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+/* line 30, ../sass/_global.scss */
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
+}
+
+/* Clearing */
+/* line 5, ../sass/_typography.scss */
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: lato;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Headings */
+/* line 14, ../sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: lobster;
+  clear: both;
+  font-size: 30px;
+  font-size: 3rem;
+  color: #32313f;
+}
+
+/* line 21, ../sass/_typography.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* Text elements */
+/* line 29, ../sass/_typography.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 32, ../sass/_typography.scss */
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+
+/* line 35, ../sass/_typography.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 38, ../sass/_typography.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 42, ../sass/_typography.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+/* line 46, ../sass/_typography.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 49, ../sass/_typography.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 52, ../sass/_typography.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 55, ../sass/_typography.scss */
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+/* line 58, ../sass/_typography.scss */
+blockquote {
+  margin: 0 1.5em;
+}
+
+/* line 61, ../sass/_typography.scss */
+address {
+  margin: 0 0 1.5em;
+}
+
+/* line 64, ../sass/_typography.scss */
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  overflow: auto;
+  max-width: 100%;
+}
+
+/* line 75, ../sass/_typography.scss */
+code, kbd, tt, var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+/* line 78, ../sass/_typography.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 82, ../sass/_typography.scss */
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 87, ../sass/_typography.scss */
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 94, ../sass/_typography.scss */
+sup {
+  bottom: 1ex;
+}
+
+/* line 97, ../sass/_typography.scss */
+sub {
+  top: .5ex;
+}
+
+/* line 100, ../sass/_typography.scss */
+small {
+  font-size: 75%;
+}
+
+/* line 103, ../sass/_typography.scss */
+big {
+  font-size: 125%;
+}
+
+/* line 106, ../sass/_typography.scss */
+figure {
+  margin: 0;
+}
+
+/* line 109, ../sass/_typography.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/* line 113, ../sass/_typography.scss */
+th {
+  font-weight: bold;
+}
+
+/* line 116, ../sass/_typography.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+
+/* Links */
+/* line 123, ../sass/_typography.scss */
+a {
+  color: #f06f4f;
+}
+/* line 12, ../sass/_mixins.scss */
+a:hover, a:active, a:focus {
+  color: #99290d;
+}
+
+/* line 129, ../sass/_typography.scss */
+a:visited {
+  color: #f06f4f;
+}
+
+/* line 133, ../sass/_typography.scss */
+article.type-post .entry-title {
+  font-family: lato;
+  margin-bottom: 2rem;
+}
+/* line 137, ../sass/_typography.scss */
+article.type-post .entry-title a {
+  text-decoration: none;
+}
+/* line 138, ../sass/_typography.scss */
+article.type-post .entry-title a:hover {
+  text-decoration: underline;
+}
+
+/* line 4, ../sass/_forms.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+}
+
+/* line 12, ../sass/_forms.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 1em 2em;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: 'Lato';
+  text-transform: uppercase;
+  line-height: 1;
+  color: #f3efe6;
+  background: #32313f;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+}
+
+/* line 29, ../sass/_forms.scss */
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background: #040406;
+}
+
+/* line 39, ../sass/_forms.scss */
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background: #040406;
+}
+
+/* line 43, ../sass/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+}
+
+/* line 46, ../sass/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  -webkit-box-sizing: content-box;
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 52, ../sass/_forms.scss */
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
+}
+
+/* line 56, ../sass/_forms.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
+}
+
+/* line 65, ../sass/_forms.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  padding: 8px;
+  font-family: 'Lato', sans-serif;
+  color: #404040;
+  border: 1px solid #ccc;
+}
+
+/* line 76, ../sass/_forms.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: #272727;
+}
+
+/* line 83, ../sass/_forms.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  padding: 3px;
+}
+
+/* line 86, ../sass/_forms.scss */
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-left: 3px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 100%;
+}
+
+@media screen and (max-width: 864px) {
+  /* line 95, ../sass/_forms.scss */
+  form .form-field.frm_form_field.frm_last_half {
+    max-width: 100% !important;
+    float: none !important;
+  }
+}
+/* line 6, ../sass/_layout.scss */
+.content-area, .breadcrumbs {
+  float: left;
+  margin: 0 -30% 0 10%;
+  width: 80%;
+}
+@media screen and (max-width: 1000px) {
+  /* line 6, ../sass/_layout.scss */
+  .content-area, .breadcrumbs {
+    margin: none;
+    float: none;
+  }
+}
+
+/* line 16, ../sass/_layout.scss */
+.site-main {
+  margin: 0 30% 0 0;
+}
+@media screen and (max-width: 1000px) {
+  /* line 16, ../sass/_layout.scss */
+  .site-main {
+    margin: 0;
+  }
+}
+
+/* line 22, ../sass/_layout.scss */
+.site-content .widget-area {
+  /* Sidebar 1 */
+  float: right;
+  overflow: hidden;
+  width: 20%;
+  margin-right: 10%;
+}
+@media screen and (max-width: 1000px) {
+  /* line 22, ../sass/_layout.scss */
+  .site-content .widget-area {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* line 52, ../sass/_layout.scss */
+.site-footer {
+  clear: both;
+  background: #747371;
+  border-top: 10px solid #5a5958;
+}
+/* line 56, ../sass/_layout.scss */
+.site-footer .site-info {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  min-height: 5em;
+}
+
+/* line 66, ../sass/_layout.scss */
+#masthead {
+  background: #32313f;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #32313f), color-stop(100%, #1b1b22));
+  background-image: -webkit-linear-gradient(#32313f, #1b1b22);
+  background-image: -moz-linear-gradient(#32313f, #1b1b22);
+  background-image: -o-linear-gradient(#32313f, #1b1b22);
+  background-image: linear-gradient(#32313f, #1b1b22);
+  border-bottom: 10px solid #32313f;
+  padding: 0 10%;
+}
+/* line 73, ../sass/_layout.scss */
+#masthead .site-branding {
+  width: 30%;
+}
+/* line 76, ../sass/_layout.scss */
+#masthead #site-navigation {
+  width: 70%;
+}
+/* line 79, ../sass/_layout.scss */
+#masthead .site-branding, #masthead #site-navigation {
+  float: left;
+}
+/* line 81, ../sass/_layout.scss */
+#masthead .site-branding h1, #masthead #site-navigation h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  padding-top: .2em;
+}
+/* line 86, ../sass/_layout.scss */
+#masthead .site-branding h1 a, #masthead #site-navigation h1 a {
+  text-decoration: none;
+  color: lightblue;
+}
+/* line 24, ../../../../../../../../Users/kevin/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#masthead .site-branding h1 a:hover, #masthead #site-navigation h1 a:hover {
+  color: #3a9fc0;
+}
+/* line 91, ../sass/_layout.scss */
+#masthead .site-branding h2, #masthead #site-navigation h2 {
+  font-size: 3em;
+}
+
+@media screen and (max-width: 864px) {
+  /* line 98, ../sass/_layout.scss */
+  #masthead .site-branding {
+    width: 85%;
+  }
+  /* line 100, ../sass/_layout.scss */
+  #masthead .site-branding h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: rgba(50, 49, 63, 0.9) 2px 2px 0, rgba(173, 216, 230, 0.3) 5px 5px 0;
+  }
+
+  /* line 107, ../sass/_layout.scss */
+  #secondary {
+    margin: 0 -30% 0 10%;
+    width: 80%;
+  }
+}
+/* line 113, ../sass/_layout.scss */
+#banner.widget {
+  background: lightblue;
+  margin: 0;
+  padding: 5px 10%;
+  text-align: center;
+}
+
+/* line 122, ../sass/_layout.scss */
+footer .site-info a {
+  color: #404040;
+}
+/* line 125, ../sass/_layout.scss */
+footer .site-info a:hover {
+  text-decoration: none;
+}
+
+/* line 131, ../sass/_layout.scss */
+.portfolio-item {
+  margin: 20px;
+}
+/* line 133, ../sass/_layout.scss */
+.portfolio-item img {
+  width: 150px;
+  max-width: initial;
+}
+
+/* =Menu
+----------------------------------------------- */
+/* line 3, ../sass/_menu.scss */
+.menu-menu-1-container {
+  float: right;
+}
+
+/* line 15, ../sass/_menu.scss */
+.main-navigation ul#menu-social-items
+li a {
+  padding: 1em 0;
+}
+/* line 19, ../sass/_menu.scss */
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+/* line 24, ../sass/_menu.scss */
+.main-navigation ul li {
+  float: left;
+  position: relative;
+}
+/* line 28, ../sass/_menu.scss */
+.main-navigation ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+/* line 40, ../sass/_menu.scss */
+.main-navigation ul li:hover > a {
+  color: #f3efe6;
+}
+/* line 44, ../sass/_menu.scss */
+.main-navigation ul li:hover > ul {
+  display: block;
+}
+/* line 50, ../sass/_menu.scss */
+.main-navigation ul .current_page_item a, .main-navigation ul .current-menu-item a, .main-navigation ul .current-post-ancestor a {
+  color: #f3efe6;
+  border-bottom: 5px solid #f06f4f;
+}
+/* line 58, ../sass/_menu.scss */
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  display: none;
+  float: left;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  z-index: 99999;
+}
+/* line 72, ../sass/_menu.scss */
+.main-navigation ul ul li a {
+  width: 200px;
+}
+/* line 79, ../sass/_menu.scss */
+.main-navigation ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/* Small menu */
+/* line 90, ../sass/_menu.scss */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1022px) {
+  /* line 98, ../sass/_menu.scss */
+  .main-navigation ul li a {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 864px) {
+  /* line 107, ../sass/_menu.scss */
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block;
+  }
+
+  /* line 111, ../sass/_menu.scss */
+  .main-navigation {
+    position: relative;
+    width: 100% !important;
+  }
+  /* line 114, ../sass/_menu.scss */
+  .main-navigation ul {
+    display: none;
+  }
+  /* line 116, ../sass/_menu.scss */
+  .main-navigation ul li {
+    float: none;
+  }
+}
+/* Social Menu */
+/* line 124, ../sass/_menu.scss */
+.menu-social ul {
+  float: right;
+  text-align: center;
+  list-style: none;
+}
+/* line 129, ../sass/_menu.scss */
+.menu-social ul li {
+  position: relative;
+  display: inline-block;
+}
+/* line 133, ../sass/_menu.scss */
+.menu-social ul li a:before {
+  display: inline-block;
+  padding: 0 5px;
+  vertical-align: top;
+  font-family: 'Fontawesome';
+  font-size: 1em;
+  color: #f3efe6;
+  -webkit-font-smoothing: antialiased;
+  content: '\f0c0';
+}
+
+/* line 146, ../sass/_menu.scss */
+.menu-social li a[href*="facebook.com"]::before {
+  content: '\f09a';
+}
+
+/* line 148, ../sass/_menu.scss */
+.menu-social li a[href*="twitter.com"]::before {
+  content: '\f099';
+}
+
+/* line 150, ../sass/_menu.scss */
+.menu-social li a[href*="dribbble.com"]::before {
+  content: '\f17d';
+}
+
+/* line 152, ../sass/_menu.scss */
+.menu-social li a[href*="plus.google.com"]::before {
+  content: '\f0d5';
+}
+
+/* line 154, ../sass/_menu.scss */
+.menu-social li a[href*="pinterest.com"]::before {
+  content: '\f0d2';
+}
+
+/* line 156, ../sass/_menu.scss */
+.menu-social li a[href*="github.com"]::before {
+  content: '\f09b';
+}
+
+/* line 158, ../sass/_menu.scss */
+.menu-social li a[href*="tumblr.com"]::before {
+  content: '\f173';
+}
+
+/* line 160, ../sass/_menu.scss */
+.menu-social li a[href*="youtube.com"]::before {
+  content: '\f167';
+}
+
+/* line 162, ../sass/_menu.scss */
+.menu-social li a[href*="flickr.com"]::before {
+  content: '\f16e';
+}
+
+/* line 164, ../sass/_menu.scss */
+.menu-social li a[href*="vimeo.com"]::before {
+  content: '\f194';
+}
+
+/* line 166, ../sass/_menu.scss */
+.menu-social li a[href*="instagram.com"]::before {
+  content: '\f16d';
+}
+
+/* line 168, ../sass/_menu.scss */
+.menu-social li a[href*="linkedin.com"]::before {
+  content: '\f0e1';
+}
+
+@media screen and (max-width: 864px) {
+  /* line 171, ../sass/_menu.scss */
+  #menu-social ul {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    display: block;
+  }
+
+  /* line 178, ../sass/_menu.scss */
+  #menu-social li a {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  /* line 182, ../sass/_menu.scss */
+  #menu-social li a:hover {
+    color: #d2c3a1;
+  }
+
+  /* line 185, ../sass/_menu.scss */
+  #menu-social li a .screen-reader-text {
+    left: -10000px;
+  }
+}
+/* =Content
+----------------------------------------------- */
+/* line 3, ../sass/_content.scss */
+#content {
+  background: #f3efe6;
+}
+
+/* line 8, ../sass/_content.scss */
+.hentry {
+  padding-bottom: 1.5em;
+  margin: 0 0 1.5em;
+}
+
+/* line 13, ../sass/_content.scss */
+.byline,
+.updated {
+  display: none;
+}
+
+/* line 17, ../sass/_content.scss */
+.single .byline, .group-blog .byline {
+  display: inline;
+}
+
+/* line 23, ../sass/_content.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+/* line 26, ../sass/_content.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/* line 34, ../sass/_content.scss */
+.breadcrumbs {
+  padding: 1em 0;
+}
+
+/* =Asides
+----------------------------------------------- */
+/* line 5, ../sass/_postformats.scss */
+.blog .format-aside .entry-title, .archive .format-aside .entry-title {
+  display: none;
+}
+
+/* =Media
+----------------------------------------------- */
+/* line 9, ../sass/_media.scss */
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* line 17, ../sass/_media.scss */
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+/* line 22, ../sass/_media.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+/* line 27, ../sass/_media.scss */
+.wp-caption .wp-caption-text {
+  text-align: center;
+  margin: 0.8075em 0;
+}
+
+/* line 34, ../sass/_media.scss */
+.gallery {
+  margin-bottom: 1.5em;
+}
+/* line 40, ../sass/_media.scss */
+.gallery .gallery-item {
+  float: left;
+}
+/* line 44, ../sass/_media.scss */
+.gallery .gallery-item .gallery-icon a {
+  display: block;
+}
+/* line 46, ../sass/_media.scss */
+.gallery .gallery-item .gallery-icon img {
+  border: none;
+  height: auto;
+  margin-bottom: 0;
+}
+/* line 53, ../sass/_media.scss */
+.gallery .gallery-item .gallery-caption {
+  margin: 0;
+  text-align: center;
+}
+
+/* Fluid Gallery Columns
+   works well if you remove the default gallery styling
+   by adding the following to your functions.php
+   add_filter( 'use_default_gallery_style', '__return_false' );
+*/
+/* line 63, ../sass/_media.scss */
+.gallery-columns-2 .gallery-item {
+  width: 49%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-2 .gallery-item:nth-of-type(2n - 2) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* line 63, ../sass/_media.scss */
+.gallery-columns-3 .gallery-item {
+  width: 32%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-3 .gallery-item:nth-of-type(3n - 3) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* line 63, ../sass/_media.scss */
+.gallery-columns-4 .gallery-item {
+  width: 23.5%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-4 .gallery-item:nth-of-type(4n - 4) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* line 63, ../sass/_media.scss */
+.gallery-columns-5 .gallery-item {
+  width: 18.4%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-5 .gallery-item:nth-of-type(5n - 5) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* line 63, ../sass/_media.scss */
+.gallery-columns-6 .gallery-item {
+  width: 15%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-6 .gallery-item:nth-of-type(6n - 6) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* line 63, ../sass/_media.scss */
+.gallery-columns-7 .gallery-item {
+  width: 12.57143%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-7 .gallery-item:nth-of-type(7n - 7) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* line 63, ../sass/_media.scss */
+.gallery-columns-8 .gallery-item {
+  width: 10.75%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-8 .gallery-item:nth-of-type(8n - 8) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* line 63, ../sass/_media.scss */
+.gallery-columns-9 .gallery-item {
+  width: 9.33333%;
+  margin-right: 2;
+}
+
+/* line 67, ../sass/_media.scss */
+.gallery-columns-9 .gallery-item:nth-of-type(9n - 9) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* Make sure embeds and iframes fit their containers */
+/* line 87, ../sass/_media.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* =Navigation
+----------------------------------------------- */
+/* line 4, ../sass/_navigation.scss */
+.site-main [class*="navigation"] {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+/* line 8, ../sass/_navigation.scss */
+.site-main [class*="navigation"] .nav-previous {
+  float: left;
+  width: 50%;
+}
+/* line 13, ../sass/_navigation.scss */
+.site-main [class*="navigation"] .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/* =Comments
+----------------------------------------------- */
+/* line 3, ../sass/_comments.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* =Widgets
+----------------------------------------------- */
+/* line 4, ../sass/_widgets.scss */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets */
+  /* Search widget */
+}
+/* line 8, ../sass/_widgets.scss */
+.widget select {
+  max-width: 100%;
+}
+/* line 13, ../sass/_widgets.scss */
+.widget .widget-search .search-submit {
+  display: none;
+}
+
+/* =Infinite Scroll
+----------------------------------------------- */
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 6, ../sass/_infinitescroll.scss */
+.infinite-scroll .paging-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+/* line 11, ../sass/_infinitescroll.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
