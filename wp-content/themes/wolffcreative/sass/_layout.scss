@@ -29,11 +29,39 @@ $break: 1000px;
 		margin-right: 10%;
 		padding: 2em;
     background: darken($body-background, 5%);
-    text-align: center;
+    position: relative;
+    z-index: 1;
+    figure {
+      margin-bottom: 1em;
+    }
+    .btn {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
       @media screen and (max-width: $break) {
         margin: 0 -30% 0 10%;
         width: 80%;
         float: none;
+        div {
+          overflow: hidden;
+        }
+        figure {
+          width: 30%;
+          float: left;
+          margin-right: 1em;
+        }
+        a.btn {
+          margin-top: 1em;
+          clear: both;
+        }
+    }
+      @media screen and (max-width: 600px) {
+        figure {
+          width: 100%;
+          margin: 0 0 1em 0;
+          float: none;
+        }
     }
 	}
 }
@@ -116,6 +144,7 @@ $break: 1000px;
 }
 @media screen and (max-width: 864px) {
   #masthead {
+    padding: 0;
     .site-branding {
       width: 100%;
       h1 {
@@ -157,23 +186,60 @@ footer {
   }
 }
 // Portfolio
-.portfolio-item {
-  margin: 1%;
+.home-thumb {
+  margin: 1.65%;
   width: 30%;
   float: left;
   text-align: center;
-  img {
-    max-width: 100% !important;
-    max-width: initial;
+  figure {
+    margin: 0 auto;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    padding: 4px;
+    img {
+      max-width: 100% !important;
+      max-width: initial;
+    }
+    .fighover {
+      position: absolute;
+      top: 0;
+      left: -104%;
+      width: 98%;
+      height: 96%;
+      background: $accent-color;
+      margin: 4px;
+      @include opacity(0.9);
+      @include transition-property(all);
+      @include transition-duration(0.3s);
+      @include transition-timing-function(ease-in);
+      a {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        background: black;
+        padding: 5px;
+        @include border-radius(10px);
+        i {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+  figure:hover{
+      .fighover {
+        left: 0;
+        display: block;
+      }       
   }
 }
 @media screen and (max-width: 864px) {
-  .portfolio-item {
-    width: 48%;
+  .home-thumb {
+    width: 46%;
     } 
 }
 @media screen and (max-width: 600px) {
-  .portfolio-item {
+  .home-thumb {
     width: 100%;
     } 
 }

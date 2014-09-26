@@ -2,18 +2,23 @@
 ----------------------------------------------- */
 .menu-menu-1-container {
   float: right;
+  @media screen and (max-width: 864px) {
+    float: none;
+  }
 }
 
 .main-navigation {
-	// clear: both;
-	// display: block;
-	// width: 100%;
 
 	// first level
-  ul#menu-social-items 
+  #menu-social 
     li { 
       a {
         padding:1em 0;
+      }
+      &:hover {
+        > a:before {
+          color: $highlight;
+        }
       }
      }
 	ul {
@@ -33,13 +38,11 @@
         text-transform: uppercase;
         letter-spacing: .2em;
         transition: color 0.2s;
-        //font-weight: $bf-bold;
 			}
 
 			// link hover
 			&:hover {
 				> a {  
-				    //@include background-image(linear-gradient( darken($link-color, 40%), darken($link-color, 20%) ));
 				    color: $body-background;
 				  }
 				> ul { display: block; }
@@ -107,6 +110,8 @@
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block;
+    background: $accent-color;
+
   }
 
   .main-navigation {
@@ -140,6 +145,7 @@
         color: $body-background;
         -webkit-font-smoothing: antialiased;
         content: '\f0c0';
+        transition: color 0.2s;
       }
     }
 }
@@ -169,16 +175,17 @@
 .menu-social li a[href*="linkedin.com"]::before { content: '\f0e1'; }
                     
 @media screen and (max-width: 864px) {
+  .main-navigation {
     #menu-social ul {
-      position: absolute;
+        position: absolute;
         top: -8px;
         right: 0;
         display: block;
     }
     
-    #menu-social li a { 
-        padding-left:.5em;
-        padding-right: .5em;
+    #menu-social li a {
+        font-size: 2em; 
+        padding: 0.2em 0.2em;
     }
     #menu-social li a:hover {
       color: darken($body-background, 20%);
@@ -186,4 +193,5 @@
     #menu-social li a .screen-reader-text {
       left: -10000px;
     }
+  }
 }
