@@ -24,7 +24,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span><?php bloginfo( 'name' ); ?></span></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 
@@ -38,9 +38,3 @@
 	<?php dynamic_sidebar( 'banners' ); ?>
 
 	<div id="content" class="site-content">
-		<div class="breadcrumbs">
-		    <?php if(function_exists('bcn_display') && !is_home())
-		    {
-		        bcn_display();
-		    }?>
-		</div>

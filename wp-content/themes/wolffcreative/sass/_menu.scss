@@ -32,6 +32,7 @@
         font-size:$base-size+.3;
         text-transform: uppercase;
         letter-spacing: .2em;
+        transition: color 0.2s;
         //font-weight: $bf-bold;
 			}
 
@@ -96,7 +97,7 @@
     ul {
       li {
         a {
-          font-size:$base-size*1.5;
+          font-size:$base-size*1.3;
         }
       }
     }

@@ -12,11 +12,21 @@ textarea {
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
-	font-family: $header-font;
+	font-family: $base-font;
 	clear: both;
 	font-size: 30px;
   font-size: 3rem;
   color: $accent-color;
+}
+#masthead h1 {
+  font-family: $header-font;
+}
+#banner h1 {
+  font-weight: $bf-bold;
+  font-size: 3em;
+}
+#banner p {
+  font-size: 1.5em;
 }
 hr {
 	background-color: #ccc;
@@ -125,9 +135,6 @@ a {
 	@include hoverActiveFocus {
 		color: darken($link-color, 30%);
 	}
-}
-a:visited {
-	color: $link-visited;
 }
 article.type-post {
   .entry-title {

@@ -1,6 +1,9 @@
 $break: 1000px;
+@import "icon/*.png";
 
-
+.home .content-area .site-main {
+  margin:0;
+}
 // Layout: Content-Sidebar
 @if $layout == content-sidebar {
 	.content-area, .breadcrumbs {
@@ -24,8 +27,12 @@ $break: 1000px;
 		overflow: hidden;
 		width: 20%;
 		margin-right: 10%;
+		padding: 2em;
+    background: darken($body-background, 5%);
+    text-align: center;
       @media screen and (max-width: $break) {
-        width: 100%;
+        margin: 0 -30% 0 10%;
+        width: 80%;
         float: none;
     }
 	}
@@ -66,26 +73,27 @@ $break: 1000px;
 #masthead {
   background: $accent-color;
   @include background-image(linear-gradient( $accent-color, darken($accent-color, 10%)));
-  //margin-bottom: 1em;
-  //border-top: 10px solid shade($link-color, 10%);
   border-bottom: 10px solid $accent-color;
   padding: 0 10%;
   .site-branding {
-    width: 30%;
+    float: left;
   }
-  #site-navigation {
-    width: 70%;
+  #site-navigation, #menu-social {
+    float: right;
   }
   .site-branding, #site-navigation {
-    float: left;
     h1 {
       font-size:2.5em;
       margin-bottom: 10px;
       padding-top: .2em;
-      //@include text-shadow(rgba($accent-color, 0.9) 5px 5px 0, rgba($highlight, 0.3) 8px 8px 0);
+      clear: none;
+      float: left;
       a {
         text-decoration: none;
         @include link-colors($highlight, darken($highlight, 30%));
+        background: url(../images/fangs.svg) no-repeat;
+        padding-left: 1.5em;
+        transition: color 0.2s;
       }
     }
     h2 {
@@ -93,14 +101,34 @@ $break: 1000px;
     }
   }
 }
+@media screen and (max-width: 1100px) {
+  #masthead {
+    #site-navigation {
+      width: 90%;
+    }
+    .site-branding {
+        width: 10%;
+      h1 span {
+        display: none;
+      }
+    }
+  }
+}
 @media screen and (max-width: 864px) {
   #masthead {
     .site-branding {
-      width: 85%;
+      width: 100%;
       h1 {
+        text-align: center;
         font-size:$header-size;
         margin-bottom: 10px;
-        @include text-shadow(rgba($accent-color, 0.9) 2px 2px 0, rgba($highlight, 0.3) 5px 5px 0);
+        float: none;
+        font-size: 5em;
+        a {
+          padding: 0 1.5em;
+          background-size: 100px;
+          background-position: 50%;
+        }
       }
     }
   }
@@ -113,14 +141,15 @@ $break: 1000px;
 #banner.widget {
   background:$highlight;
   margin: 0;
-  padding: 5px 10%;
+  padding: 2em 10%;
   text-align: center;
 }
 // Site Footer 
 footer {
+   color: $footer-text;
   .site-info {
     a {
-      color: $text-color;
+      color: $footer-link;
     }
     a:hover {
       text-decoration: none;
@@ -129,9 +158,22 @@ footer {
 }
 // Portfolio
 .portfolio-item {
-  margin: 20px;
+  margin: 1%;
+  width: 30%;
+  float: left;
+  text-align: center;
   img {
-    width: 150px;
+    max-width: 100% !important;
     max-width: initial;
   }
+}
+@media screen and (max-width: 864px) {
+  .portfolio-item {
+    width: 48%;
+    } 
+}
+@media screen and (max-width: 600px) {
+  .portfolio-item {
+    width: 100%;
+    } 
 }

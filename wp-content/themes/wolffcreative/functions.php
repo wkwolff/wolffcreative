@@ -40,6 +40,7 @@ function wolffcreative_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'front-thumb', 600, 300, array( 'left', 'top' ) );
+	add_image_size( 'front-square', 300, 300, array( 'center', 'center' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
